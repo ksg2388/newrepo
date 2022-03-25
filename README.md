@@ -1,1 +1,1 @@
-# newrepo
+# osp_newrepo
