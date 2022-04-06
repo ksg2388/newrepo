@@ -2,22 +2,23 @@
 
 num1=$(<num1.txt)
 num2=$(<num2.txt)
+arr=($num1 $num2)
 
 if [ $# -gt 0 ]; then
 	echo "...run calculater..."
 	if [ $1 == "add" ]; then
-		result=$(($num1+$num2))
+		result=$((${arr[0]}+${arr[1]}))
 	elif [ $1 == "sub" ]; then
-		result=$(($num1-$num2))
+		result=$((${arr[0]}-${arr[1]}))
 	elif [ $1 == "div" ]; then
-		result=$(($num1/$num2))
+		result=$((${arr[0]}/${arr[1]}))
 	elif [ $1 == "mul" ]; then
-		result=$(($num1*$num2))
+		result=$((${arr[0]}*${arr[1]}))
 
 	fi
 	echo
-	echo "num1:$num1"
-	echo "num2:$num2"
+	echo "num1:${arr[0]}"
+	echo "num2:${arr[1]}"
 	echo "op:$1"
 	echo "result:$result"
 	
@@ -31,17 +32,17 @@ else
 	done
 
 	if [ $var == "add" ]; then
-		result=$(($num1+$num2))
+		result=$((${arr[0]}+${arr[1]}))
 	elif [ $var == "sub" ]; then
-		result=$(($num1-$num2))
+		result=$((${arr[0]}-${arr[1]}))
 	elif [ $var == "div" ]; then
-		result=$(($num1/$num2))
+		result=$((${arr[0]}/${arr[1]}))
 	elif [ $var == "mul" ]; then
-		result=$(($num1*$num2))
+		result=$((${arr[0]}*${arr[1]}))
 	fi
 	echo
-	echo "num1:$num1"
-	echo "num2:$num2"
+	echo "num1:${arr[0]}"
+	echo "num2:${arr[1]}"
 	echo "op:$var"
 	echo "result:$result"
 
