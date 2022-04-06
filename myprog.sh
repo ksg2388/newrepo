@@ -3,9 +3,9 @@
 mkdir temp
 echo "...create temp directiory..."
 
-#cp num1.txt temp/
-#cp num2.txt temp/
-#cp cal.sh temp/
+cp num1.txt temp/
+cp num2.txt temp/
+cp cal.sh temp/
 echo "...copy files to temp directory..."
 
 #menu select
